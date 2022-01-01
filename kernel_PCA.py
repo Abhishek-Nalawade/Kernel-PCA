@@ -44,13 +44,16 @@ class kPCA:
         zer = np.zeros((1, proj1.shape[1]))
         fig = plt.figure()
         ax = fig.add_subplot(projection='3d')
+        ax.set_title("Projection of points in Higher Dimensions using Kernel PCA")
         ax.scatter(proj1, proj2, proj3)
         plt.show()
 
+        plt.title("Histogram of Projection of points on 1D using Kernel PCA")
         bins = proj1.shape[1]
         plt.hist(proj1[0], bins)
         plt.show()
 
+        plt.title("Projection of points on 1D using Kernel PCA")
         plt.scatter(proj1, zer)
         plt.show()
         return

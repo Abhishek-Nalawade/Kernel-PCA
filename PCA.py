@@ -37,8 +37,11 @@ class PCA:
         vec = np.reshape(vec, (vec.shape[0],1))
         proj = np.dot(vec.T, X)
         zer = np.zeros((1, proj.shape[1]))
+        plt.title("Projection of points on 1D using standard PCA")
         plt.scatter(proj, zer)
         plt.show()
+
+        plt.title("Histogram of Projection of points on 1D using standard PCA")
         bins = proj.shape[1]
         plt.hist(proj[0,:], bins)
         plt.show()
